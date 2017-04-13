@@ -1,4 +1,5 @@
 import { injectReducer } from '../../store/reducers'
+import { injectSagas } from '../../store/sagas'
 
 export default (store) => ({
   path : 'counter',
@@ -10,10 +11,13 @@ export default (store) => ({
       /*  Webpack - use require callback to define
           dependencies for bundling   */
       const Counter = require('./containers/CounterContainer').default
-      const reducer = require('./modules/counter').default
+      const module = require('./modules/counter')
+      const reducer = module.default
+      const sagas = module.sagas
 
       /*  Add the reducer to the store on key 'counter'  */
       injectReducer(store, { key: 'counter', reducer })
+      injectSagas(store, { key: 'counter', sagas })
 
       /*  Return getComponent   */
       cb(null, Counter)

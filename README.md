@@ -1,5 +1,8 @@
 # React Redux Starter for webpack 2
-This starter kit is base on davezuko's see more: [react-redux-starter-kit](https://github.com/davezuko/react-redux-starter-kit)
+forked from [shengnian/webpack2-react-redux-starter](https://github.com/shengnian/webpack2-react-redux-starter)
+which is based on : [react-redux-starter-kit](https://github.com/davezuko/react-redux-starter-kit)
+
+the ONLY difference is that Redux-thunk is replaced by Redux-saga
 
 ## Table of Contents
 1. [Features](#features)
@@ -24,7 +27,7 @@ This starter kit is base on davezuko's see more: [react-redux-starter-kit](https
 ## Getting Started
 
 ```
-$ git clone https://github.com/shengnian/webpack2-react-redux-starter.git <my-project-name>
+$ git clone https://github.com/donyell-wang/webpack2-react-redux-starter <my-project-name>
 $ cd <my-project-name>
 $ yarn install    # Install project dependencies
 $ yarn start      # Compile and launch (same as `npm start`). The default is: http://localhost:4444.
